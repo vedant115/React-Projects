@@ -1,25 +1,89 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Slider from "react-touch-drag-slider";
+import images from "./images";
+import style, { createGlobalStyle, css } from 'styled-components';
+
+
+const GlobalStyles = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+  }
+  html,body {
+    padding: 0;
+    margin: 0;
+  }
+`
+
+const AppStyles = style.main`
+  height: 100vh;
+  width: 100vw;
+`
+
+const Button = style.button`
+  font-size: 2rem;
+  z-index: 10;
+  position: fixed;
+  top: 50%;
+  border-radius: 50%;
+  border: 2px solid black;
+  outline: none;
+  padding: 6px 16px;
+  cursor: pointer;
+  ${(props) =>
+    props.right
+      ? css`
+          right: 0.5rem;
+        `
+      : css`
+          left: 0.5rem;
+        `}
+`
 
 function App() {
+
+  const [index, setIndex] = useState(1);
+
+  const setFinishedIndex = (i) => {
+    console.log('finished', i);
+    setIndex(i);
+  }
+
+  const next = () => {
+    if (index < images.length - 1) setIndex(index + 1);
+  }
+
+  const previous = () => {
+    if (index > 0) setIndex(index - 1);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <GlobalStyles />
+      <AppStyles>
+        <Button onClick={previous} left disabled={index === 0}>
+        &#8249;
+        </Button>
+        <Button onClick={next} right disabled={index === images.length - 1}>
+        &#8250;
+        </Button>
+        <Slider
+          onSlideComplete={setFinishedIndex}
+          onSlideStart={(i) => {
+            console.clear();
+            console.log('started', i);
+          }}
+          activeIndex={index}
+          threshHold={100}
+          transition={0.5}
+          scaleOnDrag={true}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+          {images.map(({id, url, name }) => (
+            <img src={url} key={id} alt={name} />
+          ))}
+        </Slider>
+      </AppStyles>
+    </>
+  )
 }
 
 export default App;
