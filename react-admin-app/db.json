@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "title": "Post 1",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "publishedAt": "2021-06-30",
+      "id": "VWfzyqZ"
+    },
+    {
+      "title": "Post 2",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Sodales ut eu sem integer vitae justo eget magna fermentum. At consectetur lorem donec massa sapien faucibus et molestie. Risus at ultrices mi tempus. Sit amet cursus sit amet dictum sit amet. Fringilla ut morbi tincidunt augue interdum velit euismod. In nisl nisi scelerisque eu ultrices vitae auctor eu augue. Turpis massa tincidunt dui ut ornare lectus. Velit egestas dui id ornare arcu. Vulputate ut pharetra sit amet aliquam. Mi bibendum neque egestas congue quisque egestas. Duis at tellus at urna condimentum mattis pellentesque id.",
+      "publishedAt": "2021-06-16",
+      "id": "12Q6DeI"
+    },
+    {
+      "title": "Post 3",
+      "body": "Risus at ultrices mi tempus. Sit amet cursus sit amet dictum sit amet. Fringilla ut morbi tincidunt augue interdum velit euismod. In nisl nisi scelerisque eu ultrices vitae auctor eu augue. Turpis massa tincidunt dui ut ornare lectus. Velit egestas dui id ornare arcu. Vulputate ut pharetra sit amet aliquam. Mi bibendum neque egestas congue quisque egestas. Duis at tellus at urna condimentum mattis pellentesque id.",
+      "publishedAt": "2021-06-29",
+      "id": "z4Fv1N1"
+    }
+  ],
+  "users": [
+    {
+      "name": "Omkar",
+      "email": "omkar@gmail.com",
+      "id": "kWhbsIC"
+    },
+    {
+      "name": "Yash",
+      "email": "yash@gmail.com",
+      "id": "V7Y7tqB"
+    },
+    {
+      "name": "Ram",
+      "email": "ram@gmail.com",
+      "id": "b67wk59"
+    }
+  ]
+}
